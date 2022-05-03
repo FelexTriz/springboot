@@ -1,4 +1,18 @@
 spring:
-  data:
-    mongodb:
-      uri: mongodb://localhost/fqj
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://150.158.167.33:12356/ssm_db?serverTimezone=UTC
+      username: root
+      password: fengqiji2001
+
+
+
+mybatis-plus:
+  global-config:
+    db-config:
+      table-prefix: tbl_
+      id-type: auto
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
